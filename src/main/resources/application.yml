@@ -1,0 +1,14 @@
+quarkus:
+  banner:
+    enabled: false
+  hibernate-orm:
+    database:
+      generation: none
+  swagger-ui:
+    always-include: true
+    operations-sorter: method
+  smallrye-openapi:
+    info-title: Educoach API
+    info-version: 1.0.0
+  http:
+    port: 3000
