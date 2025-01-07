@@ -12,3 +12,9 @@ quarkus:
     info-version: 1.0.0
   http:
     port: 3000
+  rest-client:
+    chatgpt:
+      url: https://api.openai.com
+openai:
+  key: ${OPENAI_KEY}
+  model: gpt-4o-mini

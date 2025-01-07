@@ -1,10 +1,9 @@
 quarkus:
   log:
-    level: INFO
+    level: DEBUG
     category:
       "com.educoach":
         level: DEBUG
-
   hibernate-orm:
     log:
       sql: true
