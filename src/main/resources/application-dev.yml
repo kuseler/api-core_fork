@@ -4,6 +4,9 @@ quarkus:
     category:
       "com.educoach":
         level: DEBUG
+  datasource:
+    devservices:
+      port: 5432
 
   hibernate-orm:
     log:
