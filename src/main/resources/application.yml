@@ -5,7 +5,8 @@ quarkus:
     db-kind: postgresql
     username: postgres
     password: pass123
-    jdbc.url: jdbc:postgresql://localhost:5432/postgres
+    jdbc:
+      url: jdbc:postgresql://localhost:5432/postgres
     
   hibernate-orm:
     database:
