@@ -1,5 +1,9 @@
 package com.educoach.subjects;
 
+import java.util.List;
+
+import com.educoach.topics.TopicEntity;
+
 import io.quarkus.hibernate.orm.panache.PanacheEntityBase;
 import jakarta.persistence.*;
 
@@ -15,4 +19,8 @@ public class SubjectEntity extends PanacheEntityBase {
 
     @Column(name = "color")
     public String color;
+
+    @ManyToOne
+    @JoinColumn(name = "topic_id")
+    public TopicEntity topic;
 }

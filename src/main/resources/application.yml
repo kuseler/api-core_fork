@@ -1,9 +1,16 @@
 quarkus:
   banner:
     enabled: false
+  datasource:
+    db-kind: postgresql
+    username: postgres
+    password: pass123
+    jdbc.url: jdbc:postgresql://localhost:5432/postgres
+    
   hibernate-orm:
     database:
       generation: none
+
   swagger-ui:
     always-include: true
     operations-sorter: method

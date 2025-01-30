@@ -4,9 +4,18 @@ quarkus:
     category:
       "com.educoach":
         level: DEBUG
+
+  # datasource:
+  #   devservices:
+  #     port: 5432
   datasource:
     devservices:
-      port: 5432
+      enabled: false
+    db-kind: postgresql
+    username: postgres
+    password: pass123
+    jdbc:
+      url: jdbc:postgresql://localhost:5432/postgres
 
   hibernate-orm:
     log:
