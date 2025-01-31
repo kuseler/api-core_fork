@@ -24,7 +24,7 @@ public class TeacherResourceV1Test {
 
     @Test
     void getAll_should_return_list_of_teachers() {
-        final var teacher = new Teacher(null, "John", "Doe", null);
+        final var teacher = new Teacher(null, "John", "Doe", null, null, null, null);
         final var created = given()
                 .contentType(ContentType.JSON)
                 .body(teacher)
