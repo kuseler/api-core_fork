@@ -23,4 +23,13 @@ public class TeacherEntity extends PanacheEntityBase {
     @CreationTimestamp
     @Column(name = "creation_date")
     public Date creationDate;
+
+    @Column(name = "date_of_employment")
+    public Date dateOfEmployment;
+
+    @Column(name = "weekly_hours")
+    public Integer weeklyHours;
+
+    @Column(name = "birthday")
+    public Date birthday;
 }

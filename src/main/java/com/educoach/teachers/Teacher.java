@@ -7,6 +7,9 @@ public record Teacher(
         Long id,
         @NotBlank String firstName,
         @NotBlank String lastName,
-        Date creationDate
+        Date creationDate,
+        Date dateOfEmployment,
+        Integer weeklyHours,
+        Date birthday
 ){
 }
