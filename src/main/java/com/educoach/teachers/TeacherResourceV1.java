@@ -40,7 +40,7 @@ public class TeacherResourceV1 {
         if (teachers.isEmpty()) {
             return Response.status(Response.Status.NO_CONTENT).build();
         }
-
+        
         return Response.ok(teacherService.findAll()).build();
     }
 
