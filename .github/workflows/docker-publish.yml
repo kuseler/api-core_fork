@@ -10,7 +10,6 @@ on:
 env:
   REGISTRY: ghcr.io
   IMAGE_NAME: ${{ github.repository }}
-  OPENAI_KEY: "abc"
 
 # There is a single job in this workflow. It's configured to run on the latest available version of Ubuntu.
 jobs:
@@ -46,6 +45,8 @@ jobs:
         run: chmod +x ./gradlew
       
       - name: Build application
+        env:   
+          OPENAI_KEY: "abc"
         run: ./gradlew build
       - name: Build and push Docker image
         id: push
