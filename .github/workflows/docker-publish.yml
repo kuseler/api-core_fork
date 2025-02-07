@@ -60,7 +60,7 @@ jobs:
         if: always()
         with:
           name: artifacts
-          path: reports/tests/
+          path: build/reports/tests/test
           if-no-files-found: error
           retention-days: 90
       
