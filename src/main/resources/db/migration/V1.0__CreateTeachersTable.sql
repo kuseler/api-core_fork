@@ -54,7 +54,7 @@ create table lessons (
        add constraint FKn1lqfilldva7f2y31fxf3p4p1 
        foreign key (topic_id) 
        references topics;
-
+/*
 INSERT INTO teachers (first_name, last_name, creation_date) VALUES ('James', 'Smith', '2023-01-15');
 INSERT INTO teachers (first_name, last_name, creation_date) VALUES ('Maria', 'Garcia', '2023-02-01'); 
 INSERT INTO teachers (first_name, last_name, creation_date) VALUES ('Robert', 'Johnson', '2023-02-15');
@@ -75,7 +75,7 @@ INSERT INTO teachers (first_name, last_name, creation_date) VALUES ('Andrew', 'H
 INSERT INTO teachers (first_name, last_name, creation_date) VALUES ('Isabella', 'Young', '2023-10-01');
 INSERT INTO teachers (first_name, last_name, creation_date) VALUES ('Matthew', 'King', '2023-10-15');
 INSERT INTO teachers (first_name, last_name, creation_date) VALUES ('Victoria', 'Wright', '2023-11-01');
-
+*/
 
 INSERT INTO topics (name) VALUES ('Deutsch');
 INSERT INTO topics (name) VALUES ('Englisch');
