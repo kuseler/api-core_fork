@@ -48,7 +48,7 @@ jobs:
       - name: Build application
         env:   
           OPENAI_KEY: "abc"
-          QUARKUS_PROFILE: "dev"
+          QUARKUS_LAUNCH_DEVMODE: true
         
 
         run: echo "Active Quarkus Profile $QUARKUS_PROFILE"; ./gradlew build
