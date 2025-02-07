@@ -46,7 +46,7 @@ jobs:
 
       - name: Build application
         env:
-          QUARKUS_PROFILE: dev  # Ensures Quarkus loads the dev profile
+          OPENAI_KEY: "abc"
           QUARKUS_DATASOURCE_JDBC_URL: jdbc:postgresql://localhost:5432/mydb
           QUARKUS_DATASOURCE_USERNAME: myuser
           QUARKUS_DATASOURCE_PASSWORD: mypassword
