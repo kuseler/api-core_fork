@@ -47,6 +47,8 @@ jobs:
       - name: Build application
         env:   
           OPENAI_KEY: "abc"
+          QUARKUS_PROFILE: "dev"
+
         run: ./gradlew build
       - name: Build and push Docker image
         id: push
