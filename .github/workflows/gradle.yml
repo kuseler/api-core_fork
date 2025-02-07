@@ -19,7 +19,22 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: read
-
+      
+    services:
+      postgres:
+        image: postgres:15
+        env:
+          POSTGRES_USER: myuser
+          POSTGRES_PASSWORD: mypassword
+          POSTGRES_DB: mydb
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U myuser"
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+          
     steps:
     - uses: actions/checkout@v4
     - name: Set up JDK 17
@@ -36,6 +51,11 @@ jobs:
       uses: gradle/actions/setup-gradle@af1da67850ed9a4cedd57bfd976089dd991e2582 # v4.0.0
 
     - name: Build with Gradle Wrapper
+      env:
+          OPENAI_KEY: "abc"
+          QUARKUS_DATASOURCE_JDBC_URL: jdbc:postgresql://localhost:5432/mydb
+          QUARKUS_DATASOURCE_USERNAME: myuser
+          QUARKUS_DATASOURCE_PASSWORD: mypassword
       run: ./gradlew build
 
     # NOTE: The Gradle Wrapper is the default and recommended way to run Gradle (https://docs.gradle.org/current/userguide/gradle_wrapper.html).
